@@ -1,5 +1,5 @@
 # 06-coding-quiz
-LINK
+https://liquidgarbage.github.io/06-coding-quiz/
 
 
 - [Description](#description)
