@@ -1,0 +1,2 @@
+// store scroring data in local storage and render high scores page in order of score with initials
+// clear button event listener which clears high scores from local storage and clears high scores page
