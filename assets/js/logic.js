@@ -6,38 +6,20 @@
 //high scores button event listener which renders high scores from local storage
 
 // Select the start button, start page, questions, and timer div
-const startButton = document.getElementById('start');
-const startPage = document.getElementById('start-screen');
-const questions = document.getElementById('questions');
-const timerDiv = document.getElementById('timer');
+const startButton = document.getElementById("start");
+const startPage = document.getElementById("start-screen");
+const questions = document.getElementById("questions")
+const choices = document.getElementById("choices");
+const timerDiv = document.getElementById("timer");
 
 // Timer function
 let timer = 60;
-let timerId = null;
-
-// Function to start the timer
-// function startTimer() {
-//   timerId = setInterval(function() {
-//     timer--;
-//     timerDiv.textContent = timer;
-//     console.log(timer);
-//     if (timer === 0) {
-//       clearInterval(timerId);
-//       console.log('Timer has reached 0 and has been stopped.');
-//     }
-//   }, 1000);
-// }
-
-// Function to stop the timer
-// function stopTimer() {
-//   clearInterval(timerId);
-// }
+// timer function which counts down from 60 seconds and ends quiz when it reaches 0
 
 // Add an event listener to the start button
-startButton.addEventListener('click', function() {
-    if startPage.style.display === "none" {
-     startPage.style.display = "block";
-  } else {
-    startPage.style.display = "none";
-  }
-})
+startButton.addEventListener("click", function () {
+  startPage.style.display = "none";
+  questions.style.display = "block";
+  choices.style.display = "block";  
+  updateQuestion();
+}); 
