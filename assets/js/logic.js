@@ -6,40 +6,38 @@
 //high scores button event listener which renders high scores from local storage
 
 // Select the start button, start page, questions, and timer div
-let startButton = document.getElementById('start');
-let startPage = document.getElementById('start-screen');
-let questions = document.getElementById('questions');
-let timerDiv = document.getElementById('.timer');
+const startButton = document.getElementById('start');
+const startPage = document.getElementById('start-screen');
+const questions = document.getElementById('questions');
+const timerDiv = document.getElementById('timer');
 
 // Timer function
 let timer = 60;
 let timerId = null;
 
 // Function to start the timer
-function startTimer() {
-  timerId = setInterval(function() {
-    timer--;
-    timerDiv.textContent = timer;
-    console.log(timer);
-    if (timer === 0) {
-      clearInterval(timerId);
-      console.log('Timer has reached 0 and has been stopped.');
-    }
-  }, 1000);
-}
+// function startTimer() {
+//   timerId = setInterval(function() {
+//     timer--;
+//     timerDiv.textContent = timer;
+//     console.log(timer);
+//     if (timer === 0) {
+//       clearInterval(timerId);
+//       console.log('Timer has reached 0 and has been stopped.');
+//     }
+//   }, 1000);
+// }
 
 // Function to stop the timer
-function stopTimer() {
-  clearInterval(timerId);
-}
+// function stopTimer() {
+//   clearInterval(timerId);
+// }
 
 // Add an event listener to the start button
 startButton.addEventListener('click', function() {
-  if (timerId) {
-    stopTimer();
+    if startPage.style.display === "none" {
+     startPage.style.display = "block";
   } else {
-    startTimer();
-    startPage.style.display = 'hide';
-    questions.style.display = 'block';
+    startPage.style.display = "none";
   }
-});
+})
